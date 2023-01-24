@@ -2,7 +2,7 @@
 
 # TinyCsvParser.Collections
 
-Adding support for parsing collections in System.Immutable.Collections.
+Adding support for parsing collections in System.Collections.Generic.
 
 Supports **.NET Core** (.NET Standard 2+)
 
@@ -11,6 +11,22 @@ Supports **.NET Core** (.NET Standard 2+)
 ```
 PM> Install-Package TinyCsvParser.Collections
 ```
+
+## Support
+
+This extension adds support for the following types (in alphabetical order):
+* `HashSet<T>`
+* `ICollection<T>`
+* `IEnumerable<T>`
+* `IList<T>`
+* `IReadOnlyCollection<T>`
+* `IReadOnlyList<T>`
+* `ISet<T>`
+* `LinkedList<T>`
+* `List<T>`
+* `SortedSet<T>`
+* `Stack<T>`
+* `Queue<T>`
 
 ## Usage
 
