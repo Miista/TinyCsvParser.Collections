@@ -4,7 +4,7 @@ using TinyCsvParser.TypeConverter;
 
 namespace TinyCsvParser.Collections
 {
-    public class GenericCollectionInterfaceTypeConverter<T> : IArrayTypeConverter<ICollection<T>>
+    internal class GenericCollectionInterfaceTypeConverter<T> : IArrayTypeConverter<ICollection<T>>
     {
         private readonly ITypeConverterProvider _typeConverterProvider;
 

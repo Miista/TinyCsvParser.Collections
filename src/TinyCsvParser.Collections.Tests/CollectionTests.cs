@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AutoFixture;
@@ -113,22 +112,7 @@ namespace TinyCsvParser.Collections.Tests
         private static (ICsvParser<Data> Parser, CsvReaderOptions ReaderOptions) CreateParser()
         {
             var options = new CsvParserOptions(skipHeader: true, fieldsSeparator: ',');
-            var typeConverterProvider = new TypeConverterProvider(); 
-            typeConverterProvider = typeConverterProvider
-                .Add(new ListTypeConverter<int>(typeConverterProvider))
-                .Add(new HashSetTypeConverter<int>(typeConverterProvider))
-                .Add(new LinkedListTypeConverter<int>(typeConverterProvider))
-                .Add(new EnumerableTypeConverter<int>(typeConverterProvider))
-                .Add(new GenericCollectionInterfaceTypeConverter<int>(typeConverterProvider))
-                .Add(new ReadOnlyCollectionTypeConverter<int>(typeConverterProvider))
-                .Add(new ReadOnlyListTypeConverter<int>(typeConverterProvider))
-                .Add(new GenericListInterfaceTypeConverter<int>(typeConverterProvider))
-                .Add(new SetTypeConverter<int>(typeConverterProvider))
-                // .Add(new UntypedCollectionInterfaceTypeConverter<int>(typeConverterProvider))
-                // .Add(new UntypedListInterfaceTypeConverter<int>(typeConverterProvider))
-                // .Add(new UntypedEnumerableInterfaceTypeConverter<int>(typeConverterProvider))
-                .Add(new SortedSetTypeConverter<int>(typeConverterProvider))
-                ;
+            var typeConverterProvider = new TypeConverterProvider().AddCollections(); 
             var parser = new CsvParser<Data>(options, new Data.Mapping(typeConverterProvider));
             var readerOptions = new CsvReaderOptions(new[] { ";" });
 

@@ -4,7 +4,7 @@ using TinyCsvParser.TypeConverter;
 
 namespace TinyCsvParser.Collections
 {
-    public class SortedSetTypeConverter<T> : IArrayTypeConverter<SortedSet<T>>
+    internal class SortedSetTypeConverter<T> : IArrayTypeConverter<SortedSet<T>>
     {
         private readonly ITypeConverterProvider _typeConverterProvider;
 
