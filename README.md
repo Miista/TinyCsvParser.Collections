@@ -38,7 +38,7 @@ and passing it on to its base constructor. See example below.
 // Entity
 private class Data
 {
-    public ImmutableList<int> Ints { get; set; }
+    public List<int> Ints { get; set; }
 }
 
 // Mapping
