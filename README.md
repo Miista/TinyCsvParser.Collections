@@ -1,4 +1,5 @@
-[MIT License]: https://opensource.org/licenses/MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![NuGet version](https://badge.fury.io/nu/TinyCsvParser.Collections.svg)](https://www.nuget.org/packages/TinyCsvParser.Collections)
 
 # TinyCsvParser.Collections
 
@@ -63,4 +64,4 @@ Console.WriteLine(string.Join(',', result[0].Result.Ints)); // Prints 0,1,2
 
 ## License
 
-The library is released under terms of the [MIT License].
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
